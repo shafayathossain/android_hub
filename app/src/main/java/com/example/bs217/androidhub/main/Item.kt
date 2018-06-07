@@ -43,7 +43,7 @@ data class Item (
     val score : Double,
         @SerializedName("stargazers_count")
     val star: Int
-) : Serializable, SugarRecord<Item>(){
+) : Serializable{
     fun getUpdateAt(): Pair<Int, Int>{
         var updateDate : String = updatedAt.replace("-", "/")
         updateDate = updateDate.replace("T", " ")
